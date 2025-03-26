@@ -22,7 +22,7 @@ build:; forge build
 
 zkbuild :; forge build --zksync
 
-test :; forge test
+test :; forge test 
 
 zktest :; foundryup-zksync && forge test --zksync && foundryup
 

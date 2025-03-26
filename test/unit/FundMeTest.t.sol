@@ -87,6 +87,8 @@ contract FundMeTest is Test {
         fundme.withdraw();
         uint256 gasEnd = gasleft();
         uint256 gasUsed = (gasStart - gasEnd) * tx.gasprice;
+        console.log(gasStart);
+        console.log(gasEnd);
         console.log(gasUsed);
 
         //Assert

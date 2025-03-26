@@ -22,7 +22,7 @@ contract HelperConfig is Script {
         if (block.chainid == 11155111) {
             activeNetworkConfig = getSepoliaEth();
         } else {
-            activeNetworkConfig = getanvilEth();
+            activeNetworkConfig = getorcreateanvilEthconfig();
         }
     }
 
@@ -34,7 +34,7 @@ contract HelperConfig is Script {
         return sepoliaConfig;
     }
 
-    function getanvilEth() public returns (NetworkConfig memory) {
+    function getorcreateanvilEthconfig() public returns (NetworkConfig memory) {
         if (activeNetworkConfig.priceFeed != address(0)) {
             return activeNetworkConfig;
         }
